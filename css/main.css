@@ -1,0 +1,331 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	margin: 0 auto;
+}
+.hidden {
+	display: none;
+}
+.carousel img {
+	width: 100%;
+	height: auto;
+}
+.parallax {
+	background-attachment: fixed;
+	background-position: 50% 0;
+	position: relative;
+}
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	line-height: 15px;
+	min-height: 80px;
+}
+.header-info{
+	float: left;
+}
+.header-info h1{
+	font-size: 45px;
+}
+.header-info span {
+	color:#636363;
+	font-size: 20px;
+}
+.phone-number{
+	    float: right;
+    margin: 25px auto;
+    line-height: 2px;
+}
+.phone-number span{
+	color:#636363;
+	text-transform: uppercase;
+}
+.phone-number p{
+	font-size: 2em;
+
+}
+.fon{
+    background: url(../img/fon.jpg) no-repeat center top / cover;
+    margin-top: 30px;
+    height: 570px;
+     }
+.text{
+	max-width: 1190px;
+    margin: 0 auto;
+    padding: 100px 70px;
+    
+}
+.text span{
+	font-weight: bolder;
+	font-size: 65px;
+    color: white;
+}
+.text ul{
+	list-style-type: none;
+    font-size: 30px;
+    line-height: 2;
+    font-weight: lighter;
+    position: relative;
+    right: 100px;
+    color: white;
+    font-family: "Times New Roman";
+}
+.plitka {
+	width: 50%;
+	float: left;
+}
+.text-1{
+float: right;
+width: 50%;
+}
+.text-position{
+	padding: 75px 100px;
+    line-height: 35px;
+    font-size: 20px;
+}
+.text-position span{
+	font-weight: 800;
+}
+.plitka-position img{
+	    margin-left: 210px;
+    margin-top: 140px;
+}
+
+
+/*body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fff;
+} */
+  
+/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+      margin: 30px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 2.25rem;
+    font-weight: bolder;
+    text-align: center;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+    position: relative;
+    bottom: 73px;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+.ssilka{
+	text-decoration: none;
+}
+.button{
+	    text-transform: uppercase;
+    border: 6px solid #01c6e9;
+    
+    width: 359px;
+    padding: 5px 34px;
+    font-size: 18px;
+   
+    color: #01c6e9;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.button-modal{
+	     text-transform: uppercase;
+    border: 6px solid #01c6e9;
+    width: 153px;
+    padding: 5px 34px;
+    font-size: 21px;
+    position: relative;
+    margin: 0px auto;
+    color: #01c6e9;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+.modal-body p{
+	padding: 32px 41px;
+    font-weight: 800;
+    font-size: 20px;
+}
+.katalog{
+	height: 760px;
+}
+.plitka-position-2{
+	    margin-top: 200px;
+}
+.plitka-position-2 img{
+	    margin-left: 300px;
+
+}
+
+.plitka-position-3 img{
+	margin-left: 200px;
+    margin-top: 200px;
+}
+.pochemu{
+	line-height: 40px;
+    font-size: 19px;
+}
+.pochemu p{
+	color: #404040;
+}
+.block-img{
+	float: left;
+    width: 30%;
+}
+.block-img img{
+	width: 240px;
+	    margin-top: 30px;
+}
+.block-text{
+	float: right;
+    width: 70%;
+    line-height: 30px;
+    font-style: normal;
+}
+.content{
+	height: 535px;
+}
+.karta span{
+	font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.karta p {
+	line-height: 20px;
+    margin-top: 50px;
+
+}
